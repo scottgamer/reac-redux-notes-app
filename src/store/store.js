@@ -1,4 +1,13 @@
 import { createStore } from "redux";
-import rootReducer from "../reducers/reducers";
+import reducers from "../reducers/reducers";
 
-export default createStore(rootReducer);
+const initialState = {
+  notes: [{ title: "Sample note", content: "This is a sample note" }],
+  visibility: "AWESOME_TAG"
+};
+
+export default createStore(
+  reducers,
+  initialState,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
