@@ -8,6 +8,6 @@ const initialState = {
 
 export default createStore(
   reducers,
-  initialState,
+  undefined,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );

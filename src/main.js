@@ -9,7 +9,6 @@ let addNoteContent = addNoteForm['content'];
 
 // ------ Redux ------
 function deleteNote(index) {
-  // console.log(index);
   store.dispatch(removeNote(index));
 }
 

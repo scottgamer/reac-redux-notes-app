@@ -1,4 +1,4 @@
-import { ADD_NOTE, REMOVE_NOTE } from "../actions/actions";
+import { ADD_NOTE, REMOVE_NOTE } from '../actions/actions';
 
 function notesReducer(notes = [], action) {
   switch (action.type) {
@@ -12,9 +12,8 @@ function notesReducer(notes = [], action) {
       ];
 
     case REMOVE_NOTE:
-      return {
-        notes: notes.filter((note, index) => index !== action.id)
-      };
+      return notes.filter((note, index) => index != action.id);
+
     default:
       return notes;
   }
